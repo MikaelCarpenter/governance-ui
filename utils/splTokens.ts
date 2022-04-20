@@ -10,6 +10,7 @@ export type SplTokenInformation = {
 }
 
 export type SupportedSplTokenNames =
+  | 'RAIN'
   | 'USDC'
   | 'WSOL'
   | SolendSupportedCollateralMintNames
@@ -27,6 +28,12 @@ export const SPL_TOKENS: {
     name: 'Wrapped SOL',
     mint: new PublicKey('So11111111111111111111111111111111111111112'),
     decimals: 9,
+  },
+
+  RAIN: {
+    name: 'Rain Token',
+    mint: new PublicKey('rainH85N1vCoerCi4cQ3w6mCf7oYUdrsTFtFzpaRwjL'),
+    decimals: 5,
   },
 
   ...SolendConfiguration.getSupportedCollateralMintsInformation(),
